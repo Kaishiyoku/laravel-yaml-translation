@@ -16,7 +16,7 @@ Replace ```'Illuminate\Translation\TranslationServiceProvider',``` with ```'Kais
 
 ## How to use
 Just use regular **php** files or use **yml** or **yaml** files instead.
-In order to use Yaml your have must end with **\*.yml.php** or **\*.yaml.php**
+In order to use Yaml your localization files must end with **\*.yml.php** or **\*.yaml.php**
 
 
 ### Example
