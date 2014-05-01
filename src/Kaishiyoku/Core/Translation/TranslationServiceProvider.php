@@ -4,10 +4,9 @@ use \Illuminate\Translation\TranslationServiceProvider as IlluminateTranslationS
 
 class TranslationServiceProvider extends IlluminateTranslationServiceProvider
 {
-
 	/**
 	 * Register the translation line loader.
-     * Add support for YAML files.
+     	* Add support for YAML files.
 	 *
 	 * @return void
 	 */
