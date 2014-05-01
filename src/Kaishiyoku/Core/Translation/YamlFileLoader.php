@@ -8,7 +8,7 @@ class YamlFileLoader extends FileLoader
 {
     protected function getAllowedFileExtensions()
     {
-        return array('php', 'yml', 'yaml');
+        return array('php', 'yml.php', 'yaml.php');
     }
 
     protected function loadNamespaceOverrides(array $lines, $locale, $group, $namespace)
@@ -39,10 +39,20 @@ class YamlFileLoader extends FileLoader
             case 'php':
                 $content = $this->files->getRequire($file);
                 break;
-            case 'yml':
-            case 'yaml':
-                $parser  = new Parser();
-                $content = $parser->parse(file_get_contents($file));
+            case 'yml.php':
+            case 'yaml.php':
+                $parser = new Parser();
+                $file_str = file_get_contents($file);
+
+                if (substr($file_str, 0, 5) == '<?php')
+                {
+                    $content = $parser->parse(substr($file_str, 5));
+                }
+                else
+                {
+                    $content = $parser->parse($file_str);
+                }
+                
                 break;
         }
 
@@ -53,6 +63,7 @@ class YamlFileLoader extends FileLoader
     {
         foreach ($this->getAllowedFileExtensions() as $extension)
         {
+            //echo '<font color="red">'.$extension.'</font><br>';
             if ($this->files->exists($full = "{$path}/{$locale}/{$group}." . $extension))
             {
                 return $this->parseContent($extension, $full);
