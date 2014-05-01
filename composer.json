@@ -1,6 +1,7 @@
 {
     "name": "kaishiyoku/yaml-translation",
     "description": "Add YAML file support to Laravel TranslationServiceProvider",
+    "license": "MIT",
     "authors": [
         {
             "name": "kaishiyoku",
