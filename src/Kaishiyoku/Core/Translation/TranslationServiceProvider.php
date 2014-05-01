@@ -1,4 +1,4 @@
-<?php namespace Devitek\Core\Translation;
+<?php namespace Kaishiyoku\Core\Translation;
 
 use \Illuminate\Translation\TranslationServiceProvider as IlluminateTranslationServiceProvider;
 
@@ -13,7 +13,7 @@ class TranslationServiceProvider extends IlluminateTranslationServiceProvider
 	 */
 	protected function registerLoader()
 	{
-		$this->app->bindShared('translation.loader', function($app)
+		$this->app['translation.loader'] = $this->app->share(function($app)
 		{
             return new YamlFileLoader($app['files'], $app['path'].'/lang');
 		});

@@ -1,10 +1,10 @@
 {
-    "name": "devitek/yaml-translation",
+    "name": "kaishiyoku/yaml-translation",
     "description": "Add YAML file support to Laravel TranslationServiceProvider",
     "authors": [
         {
-            "name": "Thomas SIEFFERT",
-            "email": "caporaldead@devitek.fr"
+            "name": "kaishiyoku",
+            "email": "dev@network-gaming-clan.de"
         }
     ],
     "require": {
@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Devitek\\": "src/Devitek"
+            "Kaishiyoku\\": "src/Kaishiyoku"
         }
     },
     "minimum-stability": "dev"

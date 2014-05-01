@@ -1,4 +1,4 @@
-<?php namespace Devitek\Core\Translation;
+<?php namespace Kaishiyoku\Core\Translation;
 
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Translation\FileLoader;
@@ -8,15 +8,17 @@ class YamlFileLoader extends FileLoader
 {
     protected function getAllowedFileExtensions()
     {
-        return ['php', 'yml', 'yaml'];
+        return array('php', 'yml', 'yaml');
     }
 
     protected function loadNamespaceOverrides(array $lines, $locale, $group, $namespace)
     {
-        foreach ($this->getAllowedFileExtensions() as $extension) {
+        foreach ($this->getAllowedFileExtensions() as $extension)
+        {
             $file = "{$this->path}/packages/{$locale}/{$namespace}/{$group}." . $extension;
 
-            if ($this->files->exists($file)) {
+            if ($this->files->exists($file))
+            {
                 return $this->replaceLines($extension, $lines, $file);
             }
         }
@@ -49,12 +51,14 @@ class YamlFileLoader extends FileLoader
 
     protected function loadPath($path, $locale, $group)
     {
-        foreach ($this->getAllowedFileExtensions() as $extension) {
-            if ($this->files->exists($full = "{$path}/{$locale}/{$group}." . $extension)) {
+        foreach ($this->getAllowedFileExtensions() as $extension)
+        {
+            if ($this->files->exists($full = "{$path}/{$locale}/{$group}." . $extension))
+            {
                 return $this->parseContent($extension, $full);
             }
         }
 
-        return [];
+        return array();
     }
 }

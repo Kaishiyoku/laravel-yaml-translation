@@ -2,11 +2,13 @@
 
 This package uses Symfony/Yaml parser.
 
+**Note:** This is a fork from the orignal version of Devitek: <https://github.com/Devitek/laravel-yaml-translation>
+
 ## Installing
 
-Add ```"devitek/yaml-translation": "*"``` to your **composer.json** by running :
+Add ```"kaishiyoku/yaml-translation": "*"``` to your **composer.json** by running :
 
-    php composer.phar require devitek/yaml-translation
+    php composer.phar require kaishiyoku/yaml-translation
 
 And select version : ```0.*```
 
@@ -18,7 +20,7 @@ You have to replace
 
 with
 
-`'Devitek\Core\Translation\TranslationServiceProvider',`
+`'Kaishiyoku\Core\Translation\TranslationServiceProvider',`
 
 in **app/config/app.php**.
 
@@ -33,7 +35,7 @@ Just use regular **php** files or use **yml** or **yaml** files instead.
 
 return [
 	'hello' => 'Hello :name',
-    'author' => 'Devitek',
+    'author' => 'Kaishiyoku',
 ];
 ```
 
@@ -43,7 +45,5 @@ Will be equivalent to :
 
 ```yaml
 hello: Hello :name
-author: Devitek
+author: Kaishiyoku
 ```
-
-Enjoy it ! Feel free to fork :) !
