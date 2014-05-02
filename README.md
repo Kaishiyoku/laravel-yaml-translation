@@ -44,7 +44,7 @@ Will be equivalent to :
 hello: Hello :name
 author: Kaishiyoku
 messages:
-  none: No messages
+  none: 'No messages'
 ```
 
 Please note: The Symfony Yaml parser expects ```<space>``` indentation, using ```<tab>``` indentations will cause an exception.
