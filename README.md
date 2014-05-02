@@ -5,7 +5,8 @@ This package uses Symfony/Yaml parser.
 
 
 ## Installing
-Add ```"kaishiyoku/yaml-translation": "*"``` to your **composer.json** by running ```php composer.phar require kaishiyoku/yaml-translation```
+Add ```"kaishiyoku/yaml-translation": "*"``` to your **composer.json**  
+by running ```php composer.phar require kaishiyoku/yaml-translation```
 
 And select version ```0.*```
 
