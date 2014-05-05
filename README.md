@@ -49,3 +49,5 @@ messages:
 ```
 
 Please note: The Symfony Yaml parser expects ```<space>``` indentation, using ```<tab>``` indentations will cause an exception.
+
+If you have any issues feel free to open a ticket :)
