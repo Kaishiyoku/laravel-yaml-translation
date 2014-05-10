@@ -63,7 +63,6 @@ class YamlFileLoader extends FileLoader
     {
         foreach ($this->getAllowedFileExtensions() as $extension)
         {
-            //echo '<font color="red">'.$extension.'</font><br>';
             if ($this->files->exists($full = "{$path}/{$locale}/{$group}." . $extension))
             {
                 return $this->parseContent($extension, $full);
