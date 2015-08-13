@@ -38,8 +38,6 @@ Will be equivalent to :
 **YAML**:
 
 ```yaml
-<?php
-
 hello: Hello :name
 author: Kaishiyoku
 messages:
