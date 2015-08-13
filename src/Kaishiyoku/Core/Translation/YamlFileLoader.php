@@ -8,7 +8,7 @@ class YamlFileLoader extends FileLoader
 {
     protected function getAllowedFileExtensions()
     {
-        return array('php', 'yml.php', 'yaml.php');
+        return ['php', 'yml.php', 'yaml.php', 'yml', 'yaml'];
     }
 
     protected function loadNamespaceOverrides(array $lines, $locale, $group, $namespace)
@@ -41,6 +41,8 @@ class YamlFileLoader extends FileLoader
                 break;
             case 'yml.php':
             case 'yaml.php':
+            case 'yml':
+            case 'yaml':
                 $parser = new Parser();
                 $file_str = file_get_contents($file);
 
@@ -69,6 +71,6 @@ class YamlFileLoader extends FileLoader
             }
         }
 
-        return array();
+        return [];
     }
 }

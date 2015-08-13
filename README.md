@@ -1,14 +1,12 @@
-# Add Yaml file support for Laravel 4.0.x TranslationServiceProvider
+# Add Yaml file support for Laravel 5.* TranslationServiceProvider
 This package uses Symfony/Yaml parser.
 
 **Note:** This is a fork from the orignal version of Devitek: <https://github.com/Devitek/laravel-yaml-translation>
 
 
 ## Installing
-Add ```"kaishiyoku/yaml-translation": "*"``` to your **composer.json**  
+Add ```"kaishiyoku/yaml-translation": "5.*"``` to your **composer.json**
 by running ```php composer.phar require kaishiyoku/yaml-translation```
-
-And select version ```0.*```
 
 
 ## Add support in Laravel
@@ -17,7 +15,7 @@ Replace ```'Illuminate\Translation\TranslationServiceProvider',``` with ```'Kais
 
 ## How to use
 Just use regular **php** files or use **yml** or **yaml** files instead.
-In order to use Yaml your localization files must end with **\*.yml.php** or **\*.yaml.php**
+In order to use Yaml your localization files must end with **\*.yml.php**, **\*.yaml.php**, **\*.yml** or **\*.yaml**
 
 
 ### Example
