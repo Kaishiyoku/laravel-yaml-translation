@@ -1,13 +1,10 @@
 # Add Yaml file support for Laravel 5.4 TranslationServiceProvider
-This package uses Symfony/Yaml parser.
+This package uses Symfony/Yaml parser. **Note:** This is a fork from the orignal version of Devitek: <https://github.com/Devitek/laravel-yaml-translation>
 
 # Please note
 Laravel 5.4 only support for coming 5.4.\* releases. If you still want to use this package with an older Laravel version use an older release.
 
 The last release with Laravel <= 5.3.\* support is **5.0.1**
-
-**Note:** This is a fork from the orignal version of Devitek: <https://github.com/Devitek/laravel-yaml-translation>
-
 
 ## Installing
 Add ```"kaishiyoku/yaml-translation": "5.*"``` to your **composer.json**
