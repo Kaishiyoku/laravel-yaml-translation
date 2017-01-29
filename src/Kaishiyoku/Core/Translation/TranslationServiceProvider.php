@@ -12,10 +12,9 @@ class TranslationServiceProvider extends IlluminateTranslationServiceProvider
 	 */
 	protected function registerLoader()
 	{
-		$this->app['translation.loader'] = $this->app->share(function($app)
-		{
+	    $this->app->singleton('translation.loader', function ($app) {
             return new YamlFileLoader($app['files'], $app['path.lang']);
-		});
+        });
 	}
 
 }
