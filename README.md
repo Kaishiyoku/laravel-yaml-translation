@@ -26,13 +26,13 @@ In order to use Yaml your localization files must end with **\*.yml.php**, **\*.
 ```php
 <?php
 
-return array(
+return [
   'hello' => 'Hello :name',
   'author' => 'Kaishiyoku',
-  'messages' => array(
+  'messages' => [
     'none' => 'No messages'
-  )
-);
+  ]
+];
 ```
 
 Will be equivalent to :
