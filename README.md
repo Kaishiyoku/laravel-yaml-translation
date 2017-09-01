@@ -6,6 +6,8 @@ Laravel =>5.4 only support for coming =>5.4.\* releases. If you still want to us
 
 The last release with Laravel <= 5.3.\* support is **5.0.1**
 
+**Please note:** As with version 5.5.1 this package is using Symfony Yaml Parser v3.\* and therefore the YAML format has been changed a bit - you now have to escape lines with quotes (either double or single ones) when there are special keys present like a colon, otherwise you'll get an error like this: `A colon cannot be used in an unquoted mapping value at line [...]`. I have slightly changed the example below to demonstrate the changes.
+
 ## Installing
 Add ```"kaishiyoku/yaml-translation": "5.*"``` to your **composer.json**
 by running ```php composer.phar require kaishiyoku/yaml-translation```
@@ -40,7 +42,7 @@ Will be equivalent to :
 **YAML**:
 
 ```yaml
-hello: Hello :name
+hello: 'Hello :name' # must now be escaped with quotes
 author: Kaishiyoku
 messages:
   none: 'No messages'
