@@ -1,3 +1,5 @@
+![Packagist](https://img.shields.io/packagist/v/kaishiyoku/yaml-translation.svg) ![Packagist](https://img.shields.io/packagist/dt/kaishiyoku/yaml-translation.svg)
+
 # Add Yaml file support for Laravel >=5.4 TranslationServiceProvider
 This package uses Symfony/Yaml parser. **Note:** This is a fork from the orignal version of Devitek: <https://github.com/Devitek/laravel-yaml-translation>
 
